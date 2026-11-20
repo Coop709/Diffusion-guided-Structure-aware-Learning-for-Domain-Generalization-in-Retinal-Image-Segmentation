@@ -1,0 +1,21 @@
+{
+  "protocol": "dg",
+  "task": "odoc",
+  "sam_type": "vit_b",
+  "use_sam": true,
+  "seeds": [0, 42, 3407],
+  "variants": ["joint"],
+  "epochs": {"stage1": 100, "stage2": 100},
+  "batch_size": 2,
+  "amp": true,
+  "sampling": {"steps": 50, "eta": 0.0},
+  "fda": {"epochs": 10, "beta": 0.1},
+  "save_features": false,
+  "structure_metrics": false,
+  "splits": [
+    {"name": "Drishti-GS", "source_train": "../manifests/odoc_lodo/Drishti-GS/source_train.jsonl", "target": "../manifests/odoc_lodo/Drishti-GS/target.jsonl"},
+    {"name": "RIM-ONE-r3", "source_train": "../manifests/odoc_lodo/RIM-ONE-r3/source_train.jsonl", "target": "../manifests/odoc_lodo/RIM-ONE-r3/target.jsonl"},
+    {"name": "REFUGE-train", "source_train": "../manifests/odoc_lodo/REFUGE-train/source_train.jsonl", "target": "../manifests/odoc_lodo/REFUGE-train/target.jsonl"},
+    {"name": "REFUGE-val", "source_train": "../manifests/odoc_lodo/REFUGE-val/source_train.jsonl", "target": "../manifests/odoc_lodo/REFUGE-val/target.jsonl"}
+  ]
+}

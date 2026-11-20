@@ -1,0 +1,22 @@
+{
+  "protocol": "dg",
+  "task": "vessel",
+  "sam_type": "vit_b",
+  "use_sam": false,
+  "seeds": [0, 42, 3407],
+  "variants": ["gaussian"],
+  "epochs": {"stage1": 100, "stage2": 100},
+  "batch_size": 2,
+  "amp": true,
+  "sampling": {"steps": 50, "eta": 0.0},
+  "save_features": true,
+  "structure_metrics": true,
+  "structure": {"thin_diameter": 3.0, "bifurcation_tolerance": 2.0},
+  "fda": {"epochs": 10, "beta": 0.1},
+  "splits": [
+    {"name": "STARE", "source_train": "../manifests/lodo/STARE/source_train.jsonl", "source_val": "../manifests/lodo/STARE/source_val.jsonl", "target": "../manifests/lodo/STARE/target.jsonl"},
+    {"name": "HRF", "source_train": "../manifests/lodo/HRF/source_train.jsonl", "source_val": "../manifests/lodo/HRF/source_val.jsonl", "target": "../manifests/lodo/HRF/target.jsonl"},
+    {"name": "DRIVE", "source_train": "../manifests/lodo/DRIVE/source_train.jsonl", "source_val": "../manifests/lodo/DRIVE/source_val.jsonl", "target": "../manifests/lodo/DRIVE/target.jsonl"},
+    {"name": "CHASEDB1", "source_train": "../manifests/lodo/CHASEDB1/source_train.jsonl", "source_val": "../manifests/lodo/CHASEDB1/source_val.jsonl", "target": "../manifests/lodo/CHASEDB1/target.jsonl"}
+  ]
+}

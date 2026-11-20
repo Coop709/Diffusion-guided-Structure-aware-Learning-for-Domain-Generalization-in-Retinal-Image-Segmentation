@@ -1,0 +1,11 @@
+{
+  "method": "Ours",
+  "seed": 42,
+  "target_domain": "STARE",
+  "domains": {
+    "STARE": {"manifest": "../manifests/lodo/STARE/target.jsonl", "predictions": "../runs/vessel_dg/STARE/seed_42/joint/predictions"},
+    "HRF": {"manifest": "../manifests/evaluation/HRF.jsonl", "predictions": "../runs/features/STARE_fold/seed_42/HRF"},
+    "DRIVE": {"manifest": "../manifests/evaluation/DRIVE.jsonl", "predictions": "../runs/features/STARE_fold/seed_42/DRIVE"},
+    "CHASEDB1": {"manifest": "../manifests/evaluation/CHASEDB1.jsonl", "predictions": "../runs/features/STARE_fold/seed_42/CHASEDB1"}
+  }
+}
